@@ -36,7 +36,7 @@ window.addEventListener('load', ()=>{
 
 		todolist.innerHTML = ''; //vacia el string
 
-		todos.forEach(todo =>{ // itera sobre el array todos
+		todos.sort((a, b) => a.createdAt - b.createdAt).forEach(todo =>{ // itera sobre el array todos // nos aseguramos que independientemente del navegador los elementos se ordenen cronológicamente.g
 			const todoItem = document.createElement('div'); //crea un div donde añade los elementos que permiten manejar cada tarea del todolist
 			todoItem.classList.add('todo-item')
 
